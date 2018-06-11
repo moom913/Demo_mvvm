@@ -1,0 +1,16 @@
+//
+//  Video.h
+//  Demo_mvvm
+//
+//  Created by Joy Lee on 2018/6/11.
+//  Copyright © 2018年 Joy. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "JSONModel.h"
+@interface Video : JSONModel
+@property (nonatomic)NSArray<NSString *> *url;
+@property (nonatomic)NSArray<NSString *> *title;
+
+@end
+
