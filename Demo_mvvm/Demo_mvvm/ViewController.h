@@ -11,9 +11,9 @@
 @interface ViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, readonly)VideoViewModel* videoViewModel;
 @property (weak, nonatomic) IBOutlet UITableView *VdeoTableView;
-@property (weak, nonatomic) IBOutlet UITableViewCell *VideoTableViewCell;
-@property (weak, nonatomic) IBOutlet UIImageView *VideoImgView;
-@property (weak, nonatomic) IBOutlet UILabel *VideoTitleLabel;
+
+//@property (weak, nonatomic) IBOutlet UIImageView *VideoImgView;
+//@property (weak, nonatomic) IBOutlet UILabel *VideoTitleLabel;
 
 @end
 

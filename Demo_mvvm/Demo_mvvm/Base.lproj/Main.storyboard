@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,29 +23,39 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="250" id="1TE-4f-KZ3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="250" id="kJl-Dc-yNZ">
                                         <rect key="frame" x="0.0" y="28" width="375" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1TE-4f-KZ3" id="ZlZ-Rr-hBQ">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kJl-Dc-yNZ" id="MPU-nW-YXh">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUE-Gc-EE3">
-                                                    <rect key="frame" x="27" y="188" width="320" height="41"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RCK-zg-E4r">
+                                                    <rect key="frame" x="28" y="18" width="320" height="180"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="180" id="dVv-MN-bT0"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="44444" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQx-Oe-FPE">
+                                                    <rect key="frame" x="28" y="208" width="320" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vl7-So-IsU">
-                                                    <rect key="frame" x="27" y="8" width="320" height="180"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wQx-Oe-FPE" firstAttribute="leading" secondItem="MPU-nW-YXh" secondAttribute="leadingMargin" constant="20" id="AEv-hz-HAc"/>
+                                                <constraint firstItem="RCK-zg-E4r" firstAttribute="top" secondItem="MPU-nW-YXh" secondAttribute="topMargin" constant="10" id="G8w-Aw-Psb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wQx-Oe-FPE" secondAttribute="trailing" constant="19" id="PLC-Kf-ABM"/>
+                                                <constraint firstItem="RCK-zg-E4r" firstAttribute="leading" secondItem="MPU-nW-YXh" secondAttribute="leadingMargin" constant="20" id="eNn-EC-Oir"/>
+                                                <constraint firstItem="RCK-zg-E4r" firstAttribute="centerX" secondItem="MPU-nW-YXh" secondAttribute="centerX" id="h7C-ib-umW"/>
+                                                <constraint firstItem="wQx-Oe-FPE" firstAttribute="top" secondItem="RCK-zg-E4r" secondAttribute="bottom" constant="10" id="ysa-V1-4ot"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Eec-An-Bul"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="sRa-fw-cbO"/>
                                 </connections>
                             </tableView>
@@ -54,9 +65,6 @@
                     </view>
                     <connections>
                         <outlet property="VdeoTableView" destination="U4M-An-5wV" id="K1f-QG-sgP"/>
-                        <outlet property="VideoImgView" destination="Vl7-So-IsU" id="Lhe-ji-Rpb"/>
-                        <outlet property="VideoTableViewCell" destination="1TE-4f-KZ3" id="Bwg-sc-eKV"/>
-                        <outlet property="VideoTitleLabel" destination="wUE-Gc-EE3" id="Hi3-T3-n4s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
